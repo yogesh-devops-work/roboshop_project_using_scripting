@@ -9,7 +9,7 @@ yum module enable nodejs:18 -y
 echo "Installing nodejs on server"
 yum install nodejs -y
 
-echo "create new user"
+echo "create new user"  
 
 
 
