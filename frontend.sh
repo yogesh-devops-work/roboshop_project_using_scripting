@@ -23,3 +23,5 @@ echo "start and enable the nginx service"
 systemctl enable nginx
 systemctl start nginx
 
+echo "All commands for nginx server completed and done"
+
