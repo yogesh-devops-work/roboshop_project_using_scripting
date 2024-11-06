@@ -1,5 +1,6 @@
 source common.sh
 
+set -e
 
 echo "installing ngnix service"
 yum install ngnix -y
