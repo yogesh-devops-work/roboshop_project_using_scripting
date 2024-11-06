@@ -1,5 +1,6 @@
 source common.sh
 
+
 echo "save the repo file on yum repos to install the mongo"
 cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongo.repo
 status_check

@@ -1,5 +1,6 @@
 source common.sh
 
+
 echo "installing ngnix service"
 yum install ngnix -y
 status_check

@@ -1,5 +1,6 @@
 source common.sh
 
+
 echo "disable latest nodejs package"
 yum module disable nodejs -y
 status_check
