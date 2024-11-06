@@ -23,3 +23,7 @@ status_check
 echo "Check service is working on server"
 ps -ef | grep mongod
 status_check
+
+echo "trouble shooting service is working or not"
+netstat -nltp
+status_check
