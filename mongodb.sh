@@ -6,7 +6,7 @@ cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongo.repo
 status_check
 
 echo "Installing mongodb from repo"
-yum install mongodb-org -y
+yum install mongodb-org -y &>>${LOG}
 status_check
 
 echo "start and enable the mongod service"
@@ -21,7 +21,7 @@ systemctl start mongod
 status_check
 
 echo "Check service is working on server"
-ps -ef | grep mongod
+ps -ef | grep mongod &>>${LOG}
 status_check
 
 echo "trouble shooting service is working or not"

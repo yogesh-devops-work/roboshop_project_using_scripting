@@ -3,7 +3,7 @@ source common.sh
 set -e
 
 echo "installing ngnix service"
-yum install nginx -y
+yum install nginx -y &>>${LOG}
 status_check
 
 echo "deleting default data of ngnix"
@@ -17,7 +17,7 @@ status_check
 cd /usr/share/nginx/html
 
 echo "unzip the project files on specific dir"
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip &>>${LOG}
 status_check
 
 echo "copy the file data from git to nginx config "
@@ -28,5 +28,9 @@ echo "start and enable the nginx service"
 systemctl enable nginx
 status_check
 systemctl start nginx
+status_check
+
+echo "trouble shooting service is working or not"
+netstat -nltp | ps -ef | grep ngnix
 status_check
 
