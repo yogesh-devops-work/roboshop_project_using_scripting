@@ -25,5 +25,5 @@ ps -ef | grep mongod
 status_check
 
 echo "trouble shooting service is working or not"
-netstat -nltp
+netstat -nltp | ps -ef | grep mongod
 status_check
