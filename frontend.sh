@@ -31,6 +31,6 @@ systemctl start nginx
 status_check
 
 echo "trouble shooting service is working or not"
-netstat -nltp | ps -ef | grep ngnix
+netstat -nltp | grep ngnix
 status_check
 
