@@ -13,8 +13,13 @@ echo "start and enable the mongod service"
 
 systemctl enable mongod
 status_check
+
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+status_check
+
 systemctl start mongod
 status_check
 
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+echo "Check service is working on server"
+ps -ef | grep mongod
 status_check
