@@ -3,7 +3,7 @@ source common.sh
 set -e
 
 echo "installing ngnix service"
-yum install ngnix -y
+yum install nginx -y
 status_check
 
 echo "deleting default data of ngnix"
